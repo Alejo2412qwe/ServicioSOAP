@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://cliente/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://cliente/">
+
+<xs:element name="crearCliente" type="tns:crearCliente"/>
+
+<xs:element name="crearClienteResponse" type="tns:crearClienteResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:element name="restaSaldo" type="tns:restaSaldo"/>
+
+<xs:element name="restaSaldoResponse" type="tns:restaSaldoResponse"/>
+
+<xs:element name="sumaSaldo" type="tns:sumaSaldo"/>
+
+<xs:element name="sumaSaldoResponse" type="tns:sumaSaldoResponse"/>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sumaSaldo">
+<xs:sequence>
+<xs:element name="numActual" type="xs:double"/>
+<xs:element name="numNuevo" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sumaSaldoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restaSaldo">
+<xs:sequence>
+<xs:element name="numActual" type="xs:double"/>
+<xs:element name="numIngresado" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restaSaldoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearCliente">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+<xs:element name="saldoInicial" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
